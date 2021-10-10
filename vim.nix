@@ -5,8 +5,8 @@
     ((vim_configurable.override { python = python3; }).customize{
       name = "vim";
       vimrcConfig.packages.myplugins = with pkgs.vimPlugins; {
-        start = [ vim-nix vim-gutentags vim-airline ];
-        opt = [];
+        start = [ vim-nix vim-gutentags vim-airline jellybeans-vim ];
+        opt = [ ];
       };
       vimrcConfig.customRC = ''
         set autoread
@@ -74,13 +74,16 @@
         " uppercase letter.
         set smartcase
 
+        filetype plugin indent on
+
+
         "Ignore previous rules for makefile
         autocmd Filetype make setlocal noexpandtab
         autocmd FileType vim setlocal foldmethod=marker
 
         " Set colorscheme
-        "let g:jellybeans_background_color_256='232'
-        "colorscheme jellybeans
+        let g:jellybeans_background_color_256='232'
+        colorscheme jellybeans
 
         " Set gutentags tag directory
         let g:gutentags_cache_dir = expand('~/.cache/vim/ctags/')
