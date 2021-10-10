@@ -40,7 +40,7 @@
     PAGER = "most";
   };
 
-  users.users.und = import ./und.nix { inherit pkgs; };
+  users.users.und = import ./users/und.nix { inherit pkgs; };
 
   environment.systemPackages = with pkgs; [
     wget
