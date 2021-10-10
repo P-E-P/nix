@@ -11,12 +11,12 @@
   packages = with pkgs; [
     # Utils
     zip unzip lz4 unrar
-    alacritty htop
+    alacritty htop binutils
     gnupg
 
     # Dev
     rustup cargo
-    gcc m4 gnumake binutils
+    gcc m4 gnumake
     clang ctags radare2 valgrind clang-tools
     cmake patchelf
 
