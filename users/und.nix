@@ -9,9 +9,24 @@
   extraGroups = [ "wheel" "networkmanager" "audio" "libvirtd" "docker"];
 
   packages = with pkgs; [
-    htop neofetch zip unzip feh lz4 patchelf unrar gnupg imagemagick alacritty rofi
-    rustup gcc m4 gnumake binutils docker-compose dejavu_fonts cargo
-    clang ncmpcpp ctags radare2 valgrind clang-tools win-virtio
-    virt-viewer virt-manager cmake firefox pavucontrol
+    # Utils
+    zip unzip lz4 unrar
+    alacritty htop
+    gnupg
+
+    # Dev
+    rustup cargo
+    gcc m4 gnumake binutils
+    clang ctags radare2 valgrind clang-tools
+    cmake patchelf
+
+    # Virt
+    docker-compose virt-viewer virt-manager win-virtio
+
+    # Misc
+    firefox pavucontrol ncmpcpp imagemagick
+    neofetch feh
+    # Fonts
+    dejavu_fonts
   ];
 }
