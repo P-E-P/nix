@@ -17,7 +17,7 @@
     # Dev
     rustup cargo
     gcc m4 gnumake
-    clang ctags radare2 valgrind clang-tools
+    clang universal-ctags radare2 valgrind clang-tools
     cmake patchelf
 
     # Virt
